@@ -137,12 +137,6 @@ a.name, .cart-table tr td.p-name a {
   font-size: 20px;
   color: #7c261a;
 }
-@media (max-width: 768px){ /*název produktu v mobilu, aby to nebylo useklé*/
-.columns-mobile-2 .products-block>div .p .name { 
-font-size: 20px;
-text-align: center;
-}
-}
 
 .price-final {
   font-family: 'SuperCaramel', sans-serif !important;
