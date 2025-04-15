@@ -1,4 +1,4 @@
-<style>
+
 @font-face {
   font-family: 'SuperCaramel';
   src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-font/SuperCaramel.woff2') format('woff2'),
@@ -349,4 +349,3 @@ a.title {
 a.link-icon.print {
   display: none !important;
 }
-</style>
