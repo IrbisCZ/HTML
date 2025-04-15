@@ -137,13 +137,73 @@ a.name, .cart-table tr td.p-name a {
   font-size: 20px;
   color: #7c261a;
 }
-@media (max-width: 768px){ /*název produktu v mobilu, aby to nebylo useklé*/
-.columns-mobile-2 .products-block>div .p .name {
-font-size: 13px;
-text-align: center;
-}
+/* Pro malé telefony */
+@media (max-width: 576px) {
+  .columns-mobile-2 .products-block > div .p .name {
+    font-size: 16px;  /* Pro malé obrazovky */
+    text-align: center;
+  }
+
+  .columns-mobile-2 .products-block > div .p .price-final {
+    font-size: 18px;  /* Změna velikosti písma pro cenu */
+    text-align: center;
+    display: block; 
+    margin-top: 10px;
+  }
+
+  .columns-mobile-2 .products-block > div .p .price-final strong {
+    font-size: 22px;
+    font-weight: bold;
+    color: #253844;
+  }
+
+  /* Centrování produktů v řadě */
+  .columns-mobile-2 .products-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .columns-mobile-2 .products-block > div {
+    flex: 0 1 calc(50% - 10px); /* 50% šířky pro dva produkty vedle sebe s mezerou */
+    box-sizing: border-box;
+  }
 }
 
+/* Pro mobilní zařízení mezi 576px a 768px */
+@media (min-width: 577px) and (max-width: 768px) {
+  .columns-mobile-2 .products-block > div .p .name {
+    font-size: 20px; /* Pro větší mobilní zařízení */
+    text-align: center;
+  }
+
+  .columns-mobile-2 .products-block > div .p .price-final {
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .columns-mobile-2 .products-block > div .p .price-final strong {
+    font-size: 22px;
+    font-weight: bold;
+    color: #253844;
+  }
+
+  /* Centrování produktů v řadě */
+  .columns-mobile-2 .products-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .columns-mobile-2 .products-block > div {
+    flex: 0 1 calc(50% - 10px); /* 50% šířky pro dva produkty vedle sebe s mezerou */
+    box-sizing: border-box;
+  }
+}
 .price-final {
   font-family: 'SuperCaramel', sans-serif !important;
   letter-spacing: 3px;
