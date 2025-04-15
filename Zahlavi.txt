@@ -139,7 +139,7 @@ a.name, .cart-table tr td.p-name a {
 }
 @media (max-width: 768px){ /*název produktu v mobilu, aby to nebylo useklé*/
 .columns-mobile-2 .products-block>div .p .name { 
-font-size: 18px;
+font-size: 15px;
 text-align: center;
 }
 }
