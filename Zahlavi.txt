@@ -389,7 +389,7 @@ quantity .decrease, .quantity .increase {
 .benefitBanner__content p,
 .benefitBanner__content {
   color: #759BB5;
-  font-weight: 700;
+  font-weight: 500;
 }
 .benefitBanner__content h3,
 .benefitBanner__content strong {
