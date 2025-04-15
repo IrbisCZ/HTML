@@ -1,4 +1,4 @@
-
+/* === ODKAZ NA PÍSMO=== */
 @font-face {
   font-family: 'SuperCaramel';
   src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-font/SuperCaramel.woff2') format('woff2'),
@@ -103,7 +103,7 @@ main {
 ul.menu-level-1 { /*menu*/
   font-family: 'SuperCaramel', sans-serif !important;
   font-size: 20px;
-  background-color: #7c261a !important;
+  background-color: #D44F33 !important;
   color: #F7EBD8;
 }
 .navigation-in a { /*proklik na menu*/
