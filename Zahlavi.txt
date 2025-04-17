@@ -105,6 +105,8 @@ ul.menu-level-1 { /*menu*/
   font-size: 20px;
   background-color: #D44F33 !important;
   color: #F7EBD8;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
 }
 .navigation-in a { /*proklik na menu*/
 background-color: #FFFFFF;
