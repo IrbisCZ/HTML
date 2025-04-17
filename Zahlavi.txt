@@ -100,23 +100,15 @@ main {
   background: #fff;
   border-radius: 15px;
 }
-.navigation-in {
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px; 
-}
-ul.menu-level-1 { /*HLAVNÍ MENU*/
+ul.menu-level-1 { /*menu*/
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
   background-color: #D44F33 !important;
   color: #F7EBD8;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
 }
 .navigation-in a { /*proklik na menu*/
 background-color: #FFFFFF;
 color: #d44f33;
-border-top-left-radius: 100px;
-border-top-right-radius: 100px;
 }
 /* === PRODUKTY === */
 .products-inline>div .p .price strong { /*cena produktu v doporučených*/
