@@ -111,6 +111,8 @@ ul.menu-level-1 { /*HLAVNÍ MENU*/
 .navigation-in a { /*proklik na menu*/
 background-color: #FFFFFF;
 color: #d44f33;
+border-top-left-radius: 100px;
+border-top-right-radius: 100px;
 }
 /* === PRODUKTY === */
 .products-inline>div .p .price strong { /*cena produktu v doporučených*/
