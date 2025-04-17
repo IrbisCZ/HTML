@@ -100,6 +100,10 @@ main {
   background: #fff;
   border-radius: 15px;
 }
+.navigation-in {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px; 
+}
 ul.menu-level-1 { /*HLAVNÍ MENU*/
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
