@@ -10,7 +10,7 @@
 
 /* === ZÁKLADNÍ NASTAVENÍ === */
 body {
-  font-family: sans-serif;
+  font-family: Poppins;
   font-size: 20px;
   line-height: 1.385;
   color: #7c261a;
