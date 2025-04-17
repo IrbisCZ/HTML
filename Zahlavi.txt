@@ -100,12 +100,13 @@ main {
   background: #fff;
   border-radius: 15px;
 }
-ul.menu-level-1 { /*menu*/
+ul.menu-level-1 { /*HLAVNÍ MENU*/
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
   background-color: #D44F33 !important;
   color: #F7EBD8;
-  border-radius: 999px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
 }
 .navigation-in a { /*proklik na menu*/
 background-color: #FFFFFF;
