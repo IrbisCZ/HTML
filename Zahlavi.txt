@@ -36,7 +36,7 @@ h1 {
 }
 
 .navigation-in a{ /*přihlášení mobil*/
-font-family: 'SuperCaramel', sans-serif !important;
+font-family: 'SuperCaramel', Poppins !important;
 font-size: 20px;
 font-weight: 900;
 color: #F7EBD8;
@@ -101,7 +101,7 @@ main {
   border-radius: 15px;
 }
 ul.menu-level-1 { /*menu*/
-  font-family: 'SuperCaramel', sans-serif !important;
+  font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
   background-color: #D44F33 !important;
   color: #F7EBD8;
@@ -133,7 +133,7 @@ a.name, .cart-table tr td.p-name a {
   font-size: 15px;
 }
 .products h3, .products .name {
-  font-family: 'SuperCaramel', sans-serif !important;
+  font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
   color: #7c261a;
 }
@@ -204,7 +204,7 @@ a.name, .cart-table tr td.p-name a {
     box-sizing: border-box;
   }
 }
-.price-final {
+.price-final { /*cena u produktů?*/
   font-family: 'SuperCaramel', sans-serif !important;
   letter-spacing: 3px;
   color: #253844;
@@ -328,7 +328,7 @@ button.btn.btn-cart.add-to-cart-button {
 
 /* Styl textu uvnitř */
 .subcategories.with-image .text {
-  font-family: 'SuperCaramel', sans-serif;
+  font-family: 'SuperCaramel', Poppins;
   font-size: 30px;
   color: #F7EBD8;
   text-align: center;
