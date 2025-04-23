@@ -100,13 +100,30 @@ main {
   background: #fff;
   border-radius: 15px;
 }
-ul.menu-level-1 { /*menu*/
+ul.menu-level-1 { /* menu – desktop */
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
   background-color: #D44F33 !important;
   color: #F7EBD8;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
+
+  /* Oprava přetékání */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+/* Mobilní verze – úprava menu při zmenšení okna */
+@media (max-width: 768px) {
+  ul.menu-level-1 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    white-space: normal;
+    flex-wrap: wrap;
+  }
 }
 .navigation-in a { /*proklik na menu*/
 background-color: #FFFFFF;
