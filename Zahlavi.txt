@@ -158,7 +158,7 @@ a.name, .cart-table tr td.p-name a {
   .columns-mobile-2 .products-block > div .p .price-final strong {
     font-size: 22px;
     font-weight: bold;
-    color: #253844;
+    color: #154259;
   }
 
   /* Centrování produktů v řadě */
@@ -192,7 +192,7 @@ a.name, .cart-table tr td.p-name a {
   .columns-mobile-2 .products-block > div .p .price-final strong {
     font-size: 22px;
     font-weight: bold;
-    color: #253844;
+    color: #154259;
   }
 
   /* Centrování produktů v řadě */
@@ -211,14 +211,14 @@ a.name, .cart-table tr td.p-name a {
 .price-final { /*cena u produktů?*/
   font-family: 'SuperCaramel', sans-serif !important;
   letter-spacing: 3px;
-  color: #253844;
+  color: #154259;
   text-align: center;
   font-size: 80px;
 }
 .p-price .price-final, /*ceny v košíku*/
 .p-total .price-final,
 .price-final .pr-list-unit {
-  color: #253844;
+  color: #154259;
   font-size: 25px !important;
 }
 strong.availability-label.show-tooltip {
