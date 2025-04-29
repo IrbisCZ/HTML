@@ -97,7 +97,8 @@ nav {
   margin-top: 35px;
 }
 main {
-  background: #fff;
+    background: #fff;
+  border-radius: 0px;
 }
 ul.menu-level-1 { /*menu*/
   font-family: 'SuperCaramel', Poppins !important;
