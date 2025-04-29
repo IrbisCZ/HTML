@@ -96,10 +96,6 @@ header, .top-navigation-bar,
 nav {
   margin-top: 35px;
 }
-main {
-    background: #fff;
-  border-radius: 0px;
-}
 ul.menu-level-1 { /*menu*/
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
