@@ -216,7 +216,7 @@ a.name, .cart-table tr td.p-name a {
   font-family: 'SuperCaramel', sans-serif !important;
   letter-spacing: 3px;
   color: #154259;
-  text-align: left;
+  text-align: center;
   font-size: 80px;
 }
 .p-price .price-final, /*ceny v košíku*/
