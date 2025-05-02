@@ -1,10 +1,19 @@
 /* === ODKAZ NA PÍSMO=== */
+/*PÍSMO SUPERCARAMEL*/
 @font-face {
   font-family: 'SuperCaramel';
   src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-font/SuperCaramel.woff2') format('woff2'),
        url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-font/SuperCaramel.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+/*PÍSMO POPPINS*/
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/Poppins-font/Poppins-Regular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/IrbisCZ/Poppins-font/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
