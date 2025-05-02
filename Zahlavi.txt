@@ -219,10 +219,12 @@ a.name, .cart-table tr td.p-name a {
   text-align: center;
   font-size: 80px;
 }
-.p-info-wrapper .price-final { /*cena v detailu*/
+@media (min-width: 769px) { /*cena v detailu jen na PC*/
+  .p-info-wrapper .price-final {
     font-size: 50px;
     text-align: left;
     line-height: 1;
+  }
 }
 .p-price .price-final, /*ceny v košíku*/
 .p-total .price-final,
