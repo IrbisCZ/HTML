@@ -433,3 +433,17 @@ a.title {
 a.link-icon.print {
   display: none !important;
 }
+
+/* === COOKIES=== */
+.siteCookies__form {
+  background-color: #d44f33;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 0 30px rgba(27, 25, 57, .5);
+  padding: 20px 15px 25px;
+}
+@media (min-width: 768px) {
+    .siteCookies--bottom.siteCookies--scrolled {
+        background-color: #d44f33;
+    }
+}
