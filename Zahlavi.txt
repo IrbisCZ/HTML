@@ -226,6 +226,9 @@ a.name, .cart-table tr td.p-name a {
     line-height: 1;
   }
 }
+.p-info-wrapper .price-final { /*cena v detailu jen na mobilech*/
+    font-size: 50px;
+  }
 .p-price .price-final, /*ceny v košíku*/
 .p-total .price-final,
 .price-final .pr-list-unit {
