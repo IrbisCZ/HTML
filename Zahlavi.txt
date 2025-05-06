@@ -365,7 +365,7 @@ button.btn.btn-cart.add-to-cart-button {
   font-family: 'SuperCaramel', Poppins;
   font-size: 30px;
   color: #F7EBD8;
-  text-align: center;
+  text-align: center !important;
   line-height: 1.2;
   padding: 0;
 }
