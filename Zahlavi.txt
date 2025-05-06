@@ -274,8 +274,8 @@ font-size: 20px;
 }
 
 .quantity-btn { /*kolečka -/+ */
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #759BB5;
   border: 2px solid #759BB5;
