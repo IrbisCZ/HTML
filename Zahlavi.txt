@@ -42,7 +42,10 @@ h1 {
   font-size: 15px;
   color: #7c261a;
 }
-
+.top-navigation-bar { /*barva linek úplně nahoře kolem příhlášení*/
+    border-bottom-color: #efe8d8;
+    border-top-color: #efe8d8;
+}
 .navigation-in a{ /*přihlášení mobil*/
 font-family: 'SuperCaramel', Poppins !important;
 font-size: 20px;
