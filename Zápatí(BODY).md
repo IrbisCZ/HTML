@@ -1,0 +1,236 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // ❌ Nepouštět na stránce košíku
+  if (window.location.pathname.includes('/kosik')) return;
+
+  document.querySelectorAll('input[name="amount"]').forEach(function (originalInput) {
+    // ❌ Nepouštět v hlavičce
+    if (originalInput.closest('header')) return;
+
+    // ✅ Povolit i v detailu produktu – odstraněna podmínka s .quantity
+
+    originalInput.style.display = 'none';
+
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('quantity-wrapper');
+
+    const minus = document.createElement('button');
+    minus.textContent = '−';
+    minus.className = 'quantity-btn minus';
+
+    const plus = document.createElement('button');
+    plus.textContent = '+';
+    plus.className = 'quantity-btn plus';
+
+    const input = document.createElement('input');
+    input.className = 'quantity-input';
+    input.type = 'text';
+    input.value = originalInput.value;
+
+    originalInput.parentNode.insertBefore(wrapper, originalInput.nextSibling);
+    wrapper.appendChild(minus);
+    wrapper.appendChild(input);
+    wrapper.appendChild(plus);
+
+    minus.addEventListener('click', function (e) {
+      e.preventDefault();
+      let val = parseInt(input.value);
+      if (val > 1) {
+        val--;
+        input.value = val;
+        originalInput.value = val;
+      }
+    });
+
+    plus.addEventListener('click', function (e) {
+      e.preventDefault();
+      let val = parseInt(input.value);
+      val++;
+      input.value = val;
+      originalInput.value = val;
+    });
+
+    input.addEventListener('input', function () {
+      let val = parseInt(input.value);
+      if (!isNaN(val) && val > 0) {
+        originalInput.value = val;
+      }
+    });
+  });
+});
+
+// Vložení obrázku do prázdného košíku
+document.addEventListener('DOMContentLoaded', function () {
+  const heading = document.querySelector('.cart-empty .cart-heading');
+
+  if (heading) {
+    const img = document.createElement('img');
+    img.src = 'https://github.com/IrbisCZ/Ikony/blob/main/kapy-neni.png?raw=true';
+    img.alt = 'Prázdný košík';
+    img.style.display = 'block';
+    img.style.margin = '20px auto';
+    img.style.maxWidth = '250px';
+    img.style.opacity = '0.95';
+
+    // Vložíme obrázek hned za nadpis
+    heading.insertAdjacentElement('afterend', img);
+  }
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const headings = document.querySelectorAll('.cart-wrapper h3');
+    headings.forEach(function (h3) {
+      if (h3.textContent.trim() === "Zkuste vyhledávání") {
+        h3.textContent = "A nebo můžete zkusit vyhledávač";
+      }
+    });
+  });
+
+// Úspěšné přidání do košíku
+document.addEventListener('DOMContentLoaded', function () {
+  function showSuccessPopup() {
+    const popup = document.createElement("div");
+    popup.innerText = "Zboží bylo přidáno do košíku 🛒";
+    popup.style.position = "fixed";
+    popup.style.bottom = "20px";
+    popup.style.right = "20px";
+    popup.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+    popup.style.color = "#4CAF50";
+    popup.style.padding = "15px 25px";
+    popup.style.borderRadius = "999px";
+    popup.style.boxShadow = "0 0 15px rgba(0, 0, 0, 0.1)";
+    popup.style.fontSize = "16px";
+    popup.style.fontFamily = "sans-serif";
+    popup.style.border = "2px solid #4CAF50";
+    popup.style.zIndex = "9999";
+    popup.style.opacity = "1";
+    popup.style.transition = "opacity 0.5s ease";
+
+    document.body.appendChild(popup);
+
+    setTimeout(() => {
+      popup.style.opacity = "0";
+      setTimeout(() => popup.remove(), 500);
+    }, 3000);
+  }
+
+  // Počkáme na ajax přidání produktu (Shoptet posílá custom event 'ShoptetCartUpdated')
+  document.addEventListener('ShoptetCartUpdated', function (e) {
+    // Podmínka: zobrazit popup jen pokud to není změna množství v košíku (např. v /kosik)
+    if (!window.location.pathname.includes('/kosik')) {
+      showSuccessPopup();
+    }
+  });
+});
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        const popup = document.querySelector('#cboxLoadedContent');
+
+        if (popup && popup.textContent.includes('Přidáno do košíku')) {
+          // Zavři nebo skryj jen tenhle konkrétní popup
+          document.querySelector('#colorbox')?.style.setProperty('display', 'none', 'important');
+          document.querySelector('#cboxOverlay')?.style.setProperty('display', 'none', 'important');
+        }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+  
+  // Skryje celý obsah stránky při načítání
+  document.documentElement.style.display = 'none';
+
+  // Načte CSS soubor
+  fetch('https://raw.githubusercontent.com/IrbisCZ/HTML/refs/heads/main/Zahlavi.txt')
+    .then(response => response.text())
+    .then(data => {
+      const head = document.head;
+      const style = document.createElement('style');
+      style.innerHTML = data;
+      head.appendChild(style);
+
+      // Po načtení CSS zobrazí stránku
+      document.documentElement.style.display = 'block';
+    })
+    .catch(error => {
+      console.error('Chyba při načítání souboru:', error);
+      document.documentElement.style.display = 'block';
+    });
+  /*vyhledávač*/
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.querySelector('input[type="search"]');
+    if (!input) return;
+
+    // Nastavení barvy placeholder textu
+    const style = document.createElement("style");
+    style.textContent = `
+      input[type="search"]::placeholder {
+        color: #749cb5 !important;
+        opacity: 1;
+      }
+    `;
+    document.head.appendChild(style);
+
+    const phrases = [
+      "Vyčmuchat dobroty…",
+      "Nějaký konkrétní pamlsek?",
+      "Hovězí ucho?",
+      "Nebo jehněčí nožka?"
+    ];
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let typing = true;
+
+    function animatePlaceholder() {
+      if (!input) return;
+      let text = phrases[currentPhrase];
+
+      if (typing) {
+        currentChar++;
+        if (currentChar > text.length) {
+          typing = false;
+          setTimeout(animatePlaceholder, 50);
+          return;
+        }
+      } else {
+        currentChar--;
+        if (currentChar === 0) {
+          typing = true;
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+        }
+      }
+
+      input.placeholder = text.substring(0, currentChar);
+      setTimeout(animatePlaceholder, 150); /*rychlost*/
+    }
+
+    animatePlaceholder();
+  });
+
+  /*TEST - KOŠÍK*/
+  
+   document.addEventListener("DOMContentLoaded", function () {
+    // Smazat "Dostupnost"
+    const cartLabels = document.querySelectorAll('.cart-content .p-label');
+    cartLabels.forEach(el => {
+      if (el.textContent.trim().toLowerCase() === 'dostupnost') {
+        el.remove();
+      }
+    });
+
+    // Smazat "Připraveno k snědku"
+    const stockInfo = document.querySelectorAll('.cart-content .availability-label');
+    stockInfo.forEach(el => el.remove());
+  });
+    document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.cart-content td.p-price.p-cell').forEach(function (cell) {
+      if (cell.textContent.includes('Cena za m. j.')) {
+        cell.innerHTML = cell.innerHTML.replace('Cena za m. j.', 'Cena za kus');
+      }
+    });
+  });
+  document.querySelectorAll('.cart-content .unit-value').forEach(function (el) {
+      el.remove();
+    });
+    
+</script>
