@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener('DOMContentLoaded', function () {
   // ❌ Nepouštět na stránce košíku
   if (window.location.pathname.includes('/kosik')) return;
@@ -232,5 +232,3 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.cart-content .unit-value').forEach(function (el) {
       el.remove();
     });
-    
-</script>
