@@ -140,22 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Skryje celý obsah stránky při načítání
   document.documentElement.style.display = 'none';
 
-  // Načte CSS soubor
-  fetch('https://raw.githubusercontent.com/IrbisCZ/HTML/refs/heads/main/Zahlavi.txt')
-    .then(response => response.text())
-    .then(data => {
-      const head = document.head;
-      const style = document.createElement('style');
-      style.innerHTML = data;
-      head.appendChild(style);
-
-      // Po načtení CSS zobrazí stránku
-      document.documentElement.style.display = 'block';
-    })
-    .catch(error => {
-      console.error('Chyba při načítání souboru:', error);
-      document.documentElement.style.display = 'block';
-    });
   /*vyhledávač*/
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.querySelector('input[type="search"]');
