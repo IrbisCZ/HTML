@@ -156,58 +156,69 @@ document.addEventListener('DOMContentLoaded', function () {
       document.documentElement.style.display = 'block';
     });
   /*vyhledávač*/
-  document.addEventListener("DOMContentLoaded", function () {
-    const input = document.querySelector('input[type="search"]');
-    if (!input) return;
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.querySelector('input[type="search"]');
+  if (!input) return;
 
-    // Nastavení barvy placeholder textu
-    const style = document.createElement("style");
-    style.textContent = `
-      input[type="search"]::placeholder {
-        color: #749cb5 !important;
-        opacity: 1;
+  // Nastavení barvy placeholder textu
+  const style = document.createElement("style");
+  style.textContent = `
+    input[type="search"]::placeholder {
+      color: #749cb5 !important;
+      opacity: 1;
+    }
+  `;
+  document.head.appendChild(style);
+
+  const phrases = [
+    "Vyčmuchat dobroty…",
+    "Nějaký konkrétní pamlsek?",
+  ];
+  let currentPhrase = 0;
+  let currentChar = 0;
+  let typing = true;
+  let stoppedByUser = false;
+
+  // ❌ Zastaví animaci, když uživatel klikne do pole
+  input.addEventListener("focus", () => {
+    stoppedByUser = true;
+  });
+  // ✅ Spustí animaci zpět, když uživatel odejde z pole
+  input.addEventListener("blur", () => {
+    if (input.value === "") {
+      stoppedByUser = false;
+      animatePlaceholder();
+    }
+  });
+  function animatePlaceholder() {
+    if (!input || stoppedByUser) return;
+    const text = phrases[currentPhrase];
+
+    if (typing) {
+      currentChar++;
+      if (currentChar > text.length) {
+        typing = false;
+        setTimeout(animatePlaceholder, 1000);
+        return;
       }
-    `;
-    document.head.appendChild(style);
-
-    const phrases = [
-      "Vyčmuchat dobroty…",
-      "Nějaký konkrétní pamlsek?",
-      "Hovězí ucho?",
-      "Nebo jehněčí nožka?"
-    ];
-    let currentPhrase = 0;
-    let currentChar = 0;
-    let typing = true;
-
-    function animatePlaceholder() {
-      if (!input) return;
-      let text = phrases[currentPhrase];
-
-      if (typing) {
-        currentChar++;
-        if (currentChar > text.length) {
-          typing = false;
-          setTimeout(animatePlaceholder, 50);
-          return;
-        }
-      } else {
-        currentChar--;
+      input.placeholder = text.substring(0, currentChar);
+      setTimeout(animatePlaceholder, 120);
+    } else {
+      currentChar--;
+      input.placeholder = text.substring(0, currentChar);
+      const speed = 60;
+      setTimeout(() => {
         if (currentChar === 0) {
           typing = true;
           currentPhrase = (currentPhrase + 1) % phrases.length;
         }
-      }
-
-      input.placeholder = text.substring(0, currentChar);
-      setTimeout(animatePlaceholder, 150); /*rychlost*/
+        animatePlaceholder();
+      }, speed);
     }
-
-    animatePlaceholder();
-  });
-
-  /*TEST - KOŠÍK*/
-  
+  }
+  animatePlaceholder();
+});
+  /*TEST - KOŠÍK*/ 
    document.addEventListener("DOMContentLoaded", function () {
     // Smazat "Dostupnost"
     const cartLabels = document.querySelectorAll('.cart-content .p-label');
@@ -216,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function () {
         el.remove();
       }
     });
-
     // Smazat "Připraveno k snědku"
     const stockInfo = document.querySelectorAll('.cart-content .availability-label');
     stockInfo.forEach(el => el.remove());
@@ -228,6 +238,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.cart-content .unit-value').forEach(function (el) {
-      el.remove();
-    });
+    el.remove();
+  });
+});
