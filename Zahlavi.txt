@@ -2,8 +2,8 @@
 /*PÍSMO SUPERCARAMEL*/
 @font-face {
   font-family: 'SuperCaramel';
-  src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-font/SuperCaramel.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-font/SuperCaramel.woff') format('woff');
+  src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-new/SuperCaramel.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/IrbisCZ/supercaramel-new/SuperCaramel.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
