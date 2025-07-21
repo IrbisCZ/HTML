@@ -50,7 +50,7 @@ font-family: 'SuperCaramel', Poppins !important;
 font-size: 20px;
 font-weight: 900;
 color: #F7EBD8;
-background-color: #d44f33; /*změní barvu všeho v menu mobilu*/
+background-color: #B44f33; /*změní barvu všeho v menu mobilu*/
 }
 
 
@@ -60,7 +60,7 @@ background-color: #d44f33; /*změní barvu všeho v menu mobilu*/
   font-family: 'SuperCaramel', sans-serif !important;
   text-transform: uppercase;
   font-weight: normal;
-  color: #d44f33;
+  color: #B44f33;
 }
 .sidebar h4 {
   font-size: 25px;
@@ -109,14 +109,14 @@ nav {
 ul.menu-level-1 { /*menu*/
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
-  background-color: #D44F33 !important;
+  background-color: #B44F33 !important;
   color: #F7EBD8;
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
 }
 .navigation-in a { /*proklik na menu*/
 background-color: #FFFFFF;
-color: #d44f33;
+color: #B44f33;
 border-top-left-radius: 100px;
 border-top-right-radius: 100px;
 }
@@ -306,7 +306,7 @@ font-size: 20px;
 }
 
 .quantity-btn:hover {
-  background-color: #d44f33;
+  background-color: #B44f33;
   color: #fff;
 }
 button.btn.btn-cart.add-to-cart-button::before {
@@ -456,7 +456,7 @@ a.link-icon.print {
 
 /* === COOKIES=== */
 .siteCookies__form {
-  background-color: #d44f33;
+  background-color: #B44f33;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   box-shadow: 0 0 30px rgba(27, 25, 57, .5);
@@ -464,6 +464,6 @@ a.link-icon.print {
 }
 @media (min-width: 768px) {
     .siteCookies--bottom.siteCookies--scrolled {
-        background-color: #d44f33;
+        background-color: #B44f33;
     }
 }
