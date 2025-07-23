@@ -333,7 +333,7 @@ button.btn.btn-cart.add-to-cart-button {
   padding: 20px 0;
 }
 .products-block.products .p .name { /*název produktu*/
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
 }
 
