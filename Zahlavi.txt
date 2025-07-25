@@ -467,3 +467,363 @@ a.link-icon.print {
         background-color: #B44f33;
     }
 }
+body:not(.page-cart) .msg.msg-success {
+  display: none !important;
+}
+body:not([class*="order"]) .quantity .decrease,
+body:not([class*="order"]) .quantity .increase {
+  display: none !important;
+}
+body:not([class*="order"]) .quantity {
+  border: none !important;
+}
+.quantity input,
+.quantity input[type="number"] {
+  text-align: center;
+  color: #7c261a;
+  font-weight: bold;
+}
+
+/* TLAČÍTKO HLEDAT */
+.btn.btn-default, a.btn.btn-default {
+  font-family: 'SuperCaramel', sans-serif !important;
+  font-size: 20px;
+  background-color: #B44f33;
+  border-color: #B44f33;
+  color: #efe8d8;
+  border-radius: 999px;
+}
+input[type="search"] {
+  font-family: 'poppins', sans-serif;
+  font-size: 16px; /* min. kvůli iOS */
+  font-weight: 900;
+  line-height: 1.2; /* důležité pro výšku řádku */
+  padding: 0.5em 1em; /* pokud už tam něco máš, uprav podle potřeby */
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  /* Pro Safari iOS */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+/* Nadpisy */
+h4 {
+  font-family: 'SuperCaramel', sans-serif !important;
+}
+
+
+/* Navigace */ /*text v menu*/
+.navigation-in > ul > li {
+  border-color: #B44F33;
+}
+.navigation-in {
+  font-size: 14px;
+  line-height: 14px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+.navigation-in ul li a:hover b {
+  color: #B44F33;
+}
+.navigation-in ul li a b {
+  color: #EFE8D8;
+}
+@media (max-width: 768px){
+.navigation-in ul li a b { /*barva písma v menu mobilu*/
+  color: #d44f33;
+}
+.navigation-in > ul > li { /*linky v menu mobilu*/
+    border-color: #ffffff;
+}
+
+
+    .responsive-tools>a[data-target=navigation]:before, .responsive-tools>a[data-target=navigation]:hover:before { /*tlačítko menu mobilu*/
+        background-color: #B44f33;
+}
+}
+ul.menu-level-2 a span {
+  color: #154259 !important;
+  font-weight: bold;
+}
+
+
+/* Mobilní úpravy */
+@media (max-width: 768px) {
+  ul.menu-level-1,
+  .navigation-in a,
+  .navigation-in {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}
+
+
+/* Ikony, vlajky, pozadí */
+.country-flags {
+  display: none !important;
+}
+.link-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 0 19px;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.sidebar {
+  background-color: #ffffff;
+}
+main {
+  background: #fff;
+}
+body,
+.container,
+.checkoutContent {
+  background-color: #efe8d8 !important;
+}
+
+
+/* Různé UI komponenty */
+.indicator > div,
+.poll-result > div {
+  background-color: #759BB5 !important;
+  border-radius: 999px;
+}
+.btn.btn-secondary, a.btn.btn-secondary {
+  border: 3px solid #b44f33;
+  border-radius: 999px;
+}
+.cart-item > div,
+.co-box {
+  border-color: #ffffff;
+}
+.cart-table tr td {
+  border-right-color: #ffffff;
+  border-top-color: #ffffff;
+}
+
+
+/* Top produkty */
+ol.top-products li a .top-products-name {
+  font-family: 'SuperCaramel', sans-serif !important;
+  display: block;
+  font-size: 15px;
+  transition: color .3s ease-out;
+  color: #7c261a;
+}
+ol.top-products li strong {
+  color: #253844 !important;
+  font-weight: bold;
+}
+.box-bg-variant .categories a {
+  border-bottom-color: inherit;
+  color: #759BB5;
+}
+.cart-widget-product-unit {
+  color: #7c261a !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/* Tlačítka množství */
+.quantity .increase,
+.quantity .decrease {
+  color: #7c261a;
+  background-color: #fff;
+  border-color: #749cb5;
+}
+
+
+/* Košík */
+.order-summary span > span {
+  display: none;
+}
+a.btn.btn-conversion {
+  border-radius: 0 !important;
+  font-family: 'SuperCaramel', sans-serif !important;
+  font-size: 25px;
+  text-align: center;
+}
+a.btn.btn-conversion::after {
+  display: none !important;
+}
+button[type="submit"],
+input[type="submit"] {
+  text-transform: none !important;
+}
+.cart-wrapper h3 { /*nadpisy v košíku*/
+font-size: 25px;
+  font-family: 'SuperCaramel', sans-serif !important;
+}
+/* Produkty – rozložení (PC) */
+@media (min-width: 769px) {
+  .products-block .p-in-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .products-block .availability {
+    order: 1;
+    margin-bottom: 5px;
+  }
+  .products-block .p-bottom {
+    order: 2;
+    margin-bottom: 10px;
+  }
+  .products-block .p-tools form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .products-block .quantity-wrapper {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .products-block .btn-cart {
+    order: 2;
+  }
+  .products-block .btn-cart.add-to-cart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .products-block .p-bottom .p-tools {
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center !important;
+  }
+  .products-block .p-tools .btn-cart.add-to-cart-button,
+  .products-block .p .p-tools form .add-to-cart-button {
+    width: auto !important;
+    min-width: 120px !important;
+    padding: 8px 18px !important;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #B44f33;
+    color: #fff !important;
+    border: none;
+    text-align: center;
+    display: inline-block;
+  }
+  .products-block.products .p .price-final {
+    font-size: inherit;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+  /*vymaže detailní popis produktu*/
+  .basic-description > h3 {
+  display: none !important;
+}
+  /*košík v detailu produktu*/
+}
+.btn.add-to-cart-button::before {
+  content: none !important;
+  display: none !important;
+}
+.btn.add-to-cart-button{
+  font-family: 'SuperCaramel', sans-serif !important;
+  font-size: 20px;
+}
+/*kategorie v menu vlevo - hlavní kategorie*/
+.categories .topic>a {
+  color: #B44f33;
+    font-size: 22px;
+    font-weight: 900;
+    padding-left: 30px;
+}
+
+/* === MOBIL ===*/
+@media (max-width: 1024px) { /*nadpis detail*/
+  div.p-detail-inner-header {
+    text-align: center !important;
+  }
+main { /*pozadí na*/
+    background: #fff;
+  border-radius: 20px;
+}
+.category-title { /*nadpis v kategoriích*/
+    text-align: center;
+}
+.subcategories.with-image { /*zarovnání kategorií vedle sebe*/
+gap: 0px !important;
+}
+.subcategories {
+margin: 0px !important;
+}
+.availability { /*skladová dostupnost*/
+  text-align: center !important;
+}
+.availability-value {
+    text-align: center;
+  }
+  .availability-value .show-tooltip {
+    display: inline-block;
+  }
+  .products-block .price-final strong { /*cena v kategorii*/
+    font-size: 30px !important;
+  }
+    .add-to-cart { /*zarovnání košíku a -/+ na střed v detailu*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .add-to-cart .quantity {
+    justify-content: center;
+  }
+.p-detail-inner .add-to-cart .quantity {
+  padding-right: 0 !important;
+}
+  .add-to-cart .btn-cart {
+    margin: 10px auto 0;
+  }
+    .products-block .p-bottom > div { /*zarovnání košíku a -/+ na střed*/
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+   /*nejlevnější atd, kategorie v produktech*/
+fieldset {
+    BACKGROUND-COLOR: #FFFFFF;
+}
+
+}
+/*TEST - nákupní košík*/
+@media (max-width: 1024px) {
+  .cart-header li strong span {
+    font-family: 'SuperCaramel', sans-serif !important;
+  }
+    .cart-table td.p-name .main-link {
+    font-family: 'SuperCaramel', sans-serif !important;
+    font-size: 18px !important;
+  }
+  /* Cena za kus */
+.cart-table .p-label {
+  font-family: 'SuperCaramel', sans-serif !important;
+  color: #d44f33;
+}
+
+/* Součet */
+.cart-table .p-total .p-label {
+  font-family: 'SuperCaramel', sans-serif !important;
+  color: #B44f33;
+}
+}
+/*dá titulek "stránky" na střed + bílé pozadí*/
+.pageArticleDetail h1 {
+  text-align: center;
+  background: #ffffff !important;
+}
+/*clánek nadpis střed nový*/
+h1 {
+    text-align: center;
+    font-family: 'SuperCaramel', cursive !important;
+}
