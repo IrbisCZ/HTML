@@ -194,6 +194,10 @@ a.name, .cart-table tr td.p-name a {
     display: block;
     margin-top: 10px;
   }
+/*pozadi za newsletterem na mobilu*/
+    fieldset {
+        BACKGROUND-COLOR: #efe8d8;
+    }
 
   .columns-mobile-2 .products-block > div .p .price-final strong {
     font-size: 22px;
