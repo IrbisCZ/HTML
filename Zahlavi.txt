@@ -607,7 +607,7 @@ body,
 
 /* Top produkty */
 ol.top-products li a .top-products-name {
-  font-family: 'SuperCaramel', sans-serif !important;
+  font-family: 'poppins', sans-serif !important;
   display: block;
   font-size: 15px;
   transition: color .3s ease-out;
