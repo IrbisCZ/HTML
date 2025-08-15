@@ -1,4 +1,4 @@
-  /* === ODKAZ NA PÍSMO=== */
+/* === ODKAZ NA PÍSMO=== */
 /*PÍSMO SUPERCARAMEL*/
 @font-face {
   font-family: 'SuperCaramel';
@@ -8,11 +8,11 @@
   font-style: normal;
 }
 @font-face {
-    font-family: 'Poppins';
-    src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/Poppins-font/Poppins-Regular.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/IrbisCZ/Poppins-font/Poppins-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Poppins';
+  src: url('https://cdn.jsdelivr.net/gh/IrbisCZ/Poppins-font/Poppins-Regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/IrbisCZ/Poppins-font/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* === ZÁKLADNÍ NASTAVENÍ === */
@@ -33,26 +33,20 @@ h1, h2, h3, h4, h5, h6 {
 .stock h4, .stock h5, .stock h6 {
   color: inherit !important;
 }
+/* Sloučeno – ponechán finální vzhled */
 h1 {
+  text-align: center;
   font-family: 'SuperCaramel', cursive !important;
 }
 
-.top-navigation-bar a { /*přihlášení*/
+.top-navigation-bar a { /* přihlášení */
   font-size: 15px;
   color: #7c261a;
 }
-.top-navigation-bar { /*barva linek úplně nahoře kolem příhlášení*/
-    border-bottom-color: #efe8d8;
-    border-top-color: #efe8d8;
+.top-navigation-bar { /* barva linek úplně nahoře kolem přihlášení */
+  border-bottom-color: #efe8d8;
+  border-top-color: #efe8d8;
 }
-.navigation-in a{ /*přihlášení mobil*/
-font-family: 'SuperCaramel', Poppins !important;
-font-size: 20px;
-font-weight: 900;
-color: #F7EBD8;
-background-color: #B44f33; /*změní barvu všeho v menu mobilu*/
-}
-
 
 /* === NADPISY === */
 .sidebar .h4, .sidebar h4,
@@ -70,7 +64,6 @@ background-color: #B44f33; /*změní barvu všeho v menu mobilu*/
   margin-top: 57px;
   text-align: center;
 }
-
 
 /* === HLAVIČKA === */
 header, .top-navigation-bar,
@@ -96,17 +89,19 @@ header, .top-navigation-bar,
     justify-content: center;
   }
 }
+
 /* === FORMULÁŘE === */
 .form-control, select {
   color: #b44f33;
   border: 3px solid #b44f33;
   border-radius: 15px;
 }
+
 /* === MENU & OBSAH === */
 nav {
   margin-top: 35px;
 }
-ul.menu-level-1 { /*menu*/
+ul.menu-level-1 { /* menu */
   font-family: 'SuperCaramel', Poppins !important;
   font-size: 20px;
   background-color: #B44F33 !important;
@@ -114,18 +109,23 @@ ul.menu-level-1 { /*menu*/
   border-top-left-radius: 100px;
   border-top-right-radius: 100px;
 }
-.navigation-in a { /*proklik na menu*/
-background-color: #FFFFFF;
-color: #B44f33;
-border-top-left-radius: 100px;
-border-top-right-radius: 100px;
+/* Sloučeno – ponechány fonty a váha z 1. bloku, barvy a radiusy z 2. bloku (aktuální vzhled) */
+.navigation-in a {
+  font-family: 'SuperCaramel', Poppins !important;
+  font-size: 20px;
+  font-weight: 900;
+  background-color: #FFFFFF;
+  color: #B44f33;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
 }
+
 /* === PRODUKTY === */
-.products-inline>div .p .price strong { /*cena produktu v doporučených*/
-    font-size: 25px;
+.products-inline>div .p .price strong { /* cena produktu v doporučených */
+  font-size: 25px;
 }
-.products-block.products .p .price strong { /*cena produktu*/
-    font-size: 35px;
+.products-block.products .p .price strong { /* cena produktu */
+  font-size: 35px;
 }
 .products > div,
 div.sidebar-inner {
@@ -150,87 +150,53 @@ a.name, .cart-table tr td.p-name a {
 /* Pro malé telefony */
 @media (max-width: 576px) {
   .columns-mobile-2 .products-block > div .p .name {
-    font-size: 16px;  /* Pro malé obrazovky */
+    font-size: 16px;
     text-align: center;
   }
-
   .columns-mobile-2 .products-block > div .p .price-final {
-    font-size: 18px;  /* Změna velikosti písma pro cenu */
+    font-size: 18px;
     text-align: center;
     display: block; 
     margin-top: 10px;
   }
-
+}
+/* Pro mobilní zařízení do 768px – sjednocená velikost strong */
+@media (max-width: 768px) {
   .columns-mobile-2 .products-block > div .p .price-final strong {
     font-size: 22px;
     font-weight: bold;
     color: #154259;
   }
-
-  /* Centrování produktů v řadě */
   .columns-mobile-2 .products-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
-
   .columns-mobile-2 .products-block > div {
-    flex: 0 1 calc(50% - 10px); /* 50% šířky pro dva produkty vedle sebe s mezerou */
+    flex: 0 1 calc(50% - 10px);
     box-sizing: border-box;
   }
 }
 
-/* Pro mobilní zařízení mezi 576px a 768px */
-@media (min-width: 577px) and (max-width: 768px) {
-  .columns-mobile-2 .products-block > div .p .name {
-    font-size: 20px; /* Pro větší mobilní zařízení */
-    text-align: center;
-  }
-
-  .columns-mobile-2 .products-block > div .p .price-final {
-    font-size: 18px;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-  }
-  .columns-mobile-2 .products-block > div .p .price-final strong {
-    font-size: 22px;
-    font-weight: bold;
-    color: #154259;
-  }
-
-  /* Centrování produktů v řadě */
-  .columns-mobile-2 .products-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .columns-mobile-2 .products-block > div {
-    flex: 0 1 calc(50% - 10px); /* 50% šířky pro dva produkty vedle sebe s mezerou */
-    box-sizing: border-box;
-  }
-}
-.price-final { /*cena u produktů?*/
+.price-final { /* cena u produktů (globálně) */
   font-family: 'SuperCaramel', sans-serif !important;
   letter-spacing: 3px;
   color: #154259;
   text-align: center;
   font-size: 80px;
 }
-@media (min-width: 769px) { /*cena v detailu jen na PC*/
+@media (min-width: 769px) { /* cena v detailu jen na PC */
   .p-info-wrapper .price-final {
     font-size: 50px;
     text-align: left;
     line-height: 1;
   }
 }
-.p-info-wrapper .price-final { /*cena v detailu jen na mobilech*/
-    font-size: 50px;
-  }
-.p-price .price-final, /*ceny v košíku*/
+.p-info-wrapper .price-final { /* cena v detailu na mobilech */
+  font-size: 50px;
+}
+.p-price .price-final, /* ceny v košíku */
 .p-total .price-final,
 .price-final .pr-list-unit {
   color: #154259;
@@ -242,6 +208,7 @@ strong.availability-label.show-tooltip {
 span.show-tooltip {
   font-size: 15px;
 }
+
 /* === KOŠÍK === */
 .btn.btn-cart, .btn.btn-conversion,
 a.btn.btn-cart, a.btn.btn-conversion {
@@ -260,7 +227,7 @@ a.btn.btn-cart, a.btn.btn-conversion {
 }
 .quantity-input {
   width: 30px;
-font-size: 20px;
+  font-size: 20px;
   text-align: center;
   border: none;
   background: #fff;
@@ -274,7 +241,8 @@ font-size: 20px;
   }
 }
 
-.quantity-btn { /*kolečka -/+ */
+/* Sloučeno – jedna definice bez duplicitních media query */
+.quantity-btn { /* kolečka -/+ */
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -282,60 +250,44 @@ font-size: 20px;
   border: 2px solid #759BB5;
   color: #F7EBD8;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease;
 }
-@media (min-width: 768px) {
-  .quantity-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-  }
-}
-@media (max-width: 768px) { /*kolečka +/- mobil*/
-.quantity-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-  }
-}
-
 .quantity-btn:hover {
   background-color: #B44f33;
   color: #fff;
 }
+
 button.btn.btn-cart.add-to-cart-button::before {
   content: none !important;
 }
 button.btn.btn-cart.add-to-cart-button {
-  width: 69% !important; /* Roztažení tlačítka o polovinu */
-  padding: 10px 20px; /* Pokud chceš upravit padding pro lepší vzhled */
+  width: 69% !important;
+  padding: 10px 20px;
 }
 @media (max-width: 768px){
-button.btn.btn-cart.add-to-cart-button {
-  width: 100% !important; /* Roztažení tlačítka o polovinu */
-  padding: 10px 20px; /* Pokud chceš upravit padding pro lepší vzhled */
+  button.btn.btn-cart.add-to-cart-button {
+    width: 100% !important;
+    padding: 10px 20px;
+  }
 }
-} 
-/* === KATEGORIE === */
 
-/* Kontejner pro rozložení do řádku s mezerami */
+/* === KATEGORIE === */
 .subcategories.with-image {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* mezery mezi tlačítky */
+  gap: 20px;
   justify-content: flex-start;
   padding: 20px 0;
 }
-.products-block.products .p .name { /*název produktu*/
+.products-block.products .p .name { /* název produktu */
   font-size: 17px;
   text-align: center;
 }
-
 
 /* Každá položka */
 .subcategories.with-image li {
@@ -360,14 +312,12 @@ button.btn.btn-cart.add-to-cart-button {
   width: auto;
 }
 
-
 /* Odstraníme šipky a obrázky */
 .subcategories.with-image a::before,
 .subcategories.with-image a::after,
 .subcategories.with-image .image {
   display: none !important;
 }
-
 
 /* Styl textu uvnitř */
 .subcategories.with-image .text {
@@ -384,15 +334,18 @@ button.btn.btn-cart.add-to-cart-button {
   }
 }
 
-.quantity .decrease:before, .quantity .increase:before { /*přidávání do košíku v detailu*/
-background-color: #759BB5 !important;
+.quantity .decrease:before, .quantity .increase:before { /* přidávání do košíku v detailu */
+  background-color: #759BB5 !important;
 }
 .quantity {
-    border-color: #759bb5;
+  border-color: #759bb5;
 }
-quantity .decrease, .quantity .increase {
-    background-color: #f3f3f3;
-    border-color: #dadada;
+/* ponechána pouze funkční varianta – druhá byla s chybou selektoru */
+.quantity .increase,
+.quantity .decrease {
+  color: #7c261a;
+  background-color: #fff;
+  border-color: #749cb5;
 }
 
 /* === NEWSLETTER === */
@@ -403,6 +356,7 @@ quantity .decrease, .quantity .increase {
   right: 0;
   top: 0;
 }
+
 /* === NOTIFIKACE === */
 .custom-cart-notification {
   position: fixed;
@@ -432,7 +386,7 @@ quantity .decrease, .quantity .increase {
 .benefitBanner__content p,
 .benefitBanner__content {
   color: #759BB5;
-font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 .benefitBanner__content h3,
 .benefitBanner__content strong {
@@ -447,7 +401,6 @@ a.title {
   font-size: 12px;
 }
 
-
 /* === TISK - SKRÝT === */
 a.link-icon.print {
   display: none !important;
@@ -458,13 +411,13 @@ a.link-icon.print {
   background-color: #B44f33;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  box-shadow: 0 0 30px rgba(27, 25, 57, .5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
   padding: 20px 15px 25px;
 }
 @media (min-width: 768px) {
-    .siteCookies--bottom.siteCookies--scrolled {
-        background-color: #B44f33;
-    }
+  .siteCookies--bottom.siteCookies--scrolled {
+    background-color: #B44f33;
+  }
 }
 body:not(.page-cart) .msg.msg-success {
   display: none !important;
@@ -496,24 +449,15 @@ input[type="search"] {
   font-family: 'poppins', sans-serif;
   font-size: 16px; /* min. kvůli iOS */
   font-weight: 900;
-  line-height: 1.2; /* důležité pro výšku řádku */
-  padding: 0.5em 1em; /* pokud už tam něco máš, uprav podle potřeby */
+  line-height: 1.2;
+  padding: 0.5em 1em;
   box-sizing: border-box;
   vertical-align: middle;
-
-  /* Pro Safari iOS */
   -webkit-appearance: none;
   appearance: none;
 }
 
-
-/* Nadpisy */
-h4 {
-  font-family: 'SuperCaramel', sans-serif !important;
-}
-
-
-/* Navigace */ /*text v menu*/
+/* Navigace */
 .navigation-in > ul > li {
   border-color: #B44F33;
 }
@@ -530,25 +474,23 @@ h4 {
   color: #EFE8D8;
 }
 @media (max-width: 768px){
-.navigation-in ul li a b { /*barva písma v menu mobilu*/
-  color: #d44f33;
-}
-.navigation-in > ul > li { /*linky v menu mobilu*/
+  .navigation-in ul li a b { /* barva písma v menu mobilu */
+    color: #d44f33;
+  }
+  .navigation-in > ul > li { /* linky v menu mobilu */
     border-color: #ffffff;
-}
-
-
-    .responsive-tools>a[data-target=navigation]:before, .responsive-tools>a[data-target=navigation]:hover:before { /*tlačítko menu mobilu*/
-        background-color: #B44f33;
-}
+  }
+  .responsive-tools>a[data-target=navigation]:before,
+  .responsive-tools>a[data-target=navigation]:hover:before { /* tlačítko menu mobilu */
+    background-color: #B44f33;
+  }
 }
 ul.menu-level-2 a span {
   color: #154259 !important;
   font-weight: bold;
 }
 
-
-/* Mobilní úpravy */
+/* Mobilní úpravy zrušení radiusů */
 @media (max-width: 768px) {
   ul.menu-level-1,
   .navigation-in a,
@@ -557,7 +499,6 @@ ul.menu-level-2 a span {
     border-top-right-radius: 0 !important;
   }
 }
-
 
 /* Ikony, vlajky, pozadí */
 .country-flags {
@@ -584,7 +525,6 @@ body,
   background-color: #efe8d8 !important;
 }
 
-
 /* Různé UI komponenty */
 .indicator > div,
 .poll-result > div {
@@ -603,7 +543,6 @@ body,
   border-right-color: #ffffff;
   border-top-color: #ffffff;
 }
-
 
 /* Top produkty */
 ol.top-products li a .top-products-name {
@@ -627,16 +566,6 @@ ol.top-products li strong {
   font-size: 16px;
 }
 
-
-/* Tlačítka množství */
-.quantity .increase,
-.quantity .decrease {
-  color: #7c261a;
-  background-color: #fff;
-  border-color: #749cb5;
-}
-
-
 /* Košík */
 .order-summary span > span {
   display: none;
@@ -654,10 +583,11 @@ button[type="submit"],
 input[type="submit"] {
   text-transform: none !important;
 }
-.cart-wrapper h3 { /*nadpisy v košíku*/
-font-size: 25px;
+.cart-wrapper h3 { /* nadpisy v košíku */
+  font-size: 25px;
   font-family: 'SuperCaramel', sans-serif !important;
 }
+
 /* Produkty – rozložení (PC) */
 @media (min-width: 769px) {
   .products-block .p-in-in {
@@ -718,59 +648,59 @@ font-size: 25px;
     margin: 0 0 20px 0;
     padding: 0;
   }
-  /*vymaže detailní popis produktu*/
+  /* vymaže detailní popis produktu */
   .basic-description > h3 {
-  display: none !important;
-}
-  /*košík v detailu produktu*/
+    display: none !important;
+  }
 }
 .btn.add-to-cart-button::before {
   content: none !important;
   display: none !important;
 }
-.btn.add-to-cart-button{
+.btn.add-to-cart-button {
   font-family: 'SuperCaramel', sans-serif !important;
   font-size: 20px;
 }
-/*kategorie v menu vlevo - hlavní kategorie*/
+
+/* kategorie v menu vlevo - hlavní kategorie */
 .categories .topic>a {
   color: #B44f33;
-    font-size: 22px;
-    font-weight: 900;
-    padding-left: 30px;
+  font-size: 22px;
+  font-weight: 900;
+  padding-left: 30px;
 }
 
 /* === MOBIL ===*/
-@media (max-width: 1024px) { /*nadpis detail*/
+@media (max-width: 1024px) { /* nadpis detail */
   div.p-detail-inner-header {
     text-align: center !important;
   }
-main { /*pozadí na*/
+  main { /* pozadí */
     background: #fff;
-  border-radius: 20px;
-}
-.category-title { /*nadpis v kategoriích*/
+    border-radius: 20px;
+  }
+  .category-title { /* nadpis v kategoriích */
     text-align: center;
-}
-.subcategories.with-image { /*zarovnání kategorií vedle sebe*/
-gap: 0px !important;
-}
-.subcategories {
-margin: 0px !important;
-}
-.availability { /*skladová dostupnost*/
-  text-align: center !important;
-}
-.availability-value {
+  }
+  .subcategories.with-image { /* zarovnání kategorií vedle sebe */
+    gap: 0px !important;
+  }
+  .subcategories {
+    margin: 0px !important;
+  }
+  .availability { /* skladová dostupnost */
+    text-align: center !important;
+  }
+  .availability-value {
     text-align: center;
   }
   .availability-value .show-tooltip {
     display: inline-block;
   }
-  .products-block .price-final strong { /*cena v kategorii*/
+  .products-block .price-final strong { /* cena v kategorii */
     font-size: 30px !important;
   }
-    .add-to-cart { /*zarovnání košíku a -/+ na střed v detailu*/
+  .add-to-cart { /* zarovnání košíku a -/+ na střed v detailu */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -778,51 +708,45 @@ margin: 0px !important;
   .add-to-cart .quantity {
     justify-content: center;
   }
-.p-detail-inner .add-to-cart .quantity {
-  padding-right: 0 !important;
-}
+  .p-detail-inner .add-to-cart .quantity {
+    padding-right: 0 !important;
+  }
   .add-to-cart .btn-cart {
     margin: 10px auto 0;
   }
-    .products-block .p-bottom > div { /*zarovnání košíku a -/+ na střed*/
+  .products-block .p-bottom > div { /* zarovnání košíku a -/+ na střed */
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
   }
-   /*nejlevnější atd, kategorie v produktech*/
-fieldset {
+  fieldset { /* nejlevnější atd, kategorie v produktech */
     BACKGROUND-COLOR: #FFFFFF;
+  }
 }
 
-}
-/*TEST - nákupní košík*/
+/* TEST - nákupní košík */
 @media (max-width: 1024px) {
   .cart-header li strong span {
     font-family: 'SuperCaramel', sans-serif !important;
   }
-    .cart-table td.p-name .main-link {
+  .cart-table td.p-name .main-link {
     font-family: 'SuperCaramel', sans-serif !important;
     font-size: 18px !important;
   }
   /* Cena za kus */
-.cart-table .p-label {
-  font-family: 'SuperCaramel', sans-serif !important;
-  color: #d44f33;
+  .cart-table .p-label {
+    font-family: 'SuperCaramel', sans-serif !important;
+    color: #d44f33;
+  }
+  /* Součet */
+  .cart-table .p-total .p-label {
+    font-family: 'SuperCaramel', sans-serif !important;
+    color: #B44f33;
+  }
 }
 
-/* Součet */
-.cart-table .p-total .p-label {
-  font-family: 'SuperCaramel', sans-serif !important;
-  color: #B44f33;
-}
-}
-/*dá titulek "stránky" na střed + bílé pozadí*/
+/* článek – titulek na střed + bílé pozadí */
 .pageArticleDetail h1 {
   text-align: center;
   background: #ffffff !important;
-}
-/*clánek nadpis střed nový*/
-h1 {
-    text-align: center;
-    font-family: 'SuperCaramel', cursive !important;
 }
