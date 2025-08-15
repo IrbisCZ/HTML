@@ -136,25 +136,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
     observer.observe(document.body, { childList: true, subtree: true });
   });
-  
-  // Skryje celý obsah stránky při načítání
-  document.documentElement.style.display = 'none';
- // Načte CSS soubor
-  fetch('https://raw.githubusercontent.com/IrbisCZ/HTML/refs/heads/main/Zahlavi.txt')
-    .then(response => response.text())
-    .then(data => {
-      const head = document.head;
-      const style = document.createElement('style');
-      style.innerHTML = data;
-      head.appendChild(style);
+  // Anti-FOUC, který nezabije layout ani měření filtru
+(function () {
+  // 1) Vložíme mini CSS pro "prepaint" režim
+  const prepaintStyle = document.createElement('style');
+  prepaintStyle.textContent = 'html.prepaint{opacity:0;pointer-events:none}';
+  document.head.appendChild(prepaintStyle);
 
-      // Po načtení CSS zobrazí stránku
-      document.documentElement.style.display = 'block';
+  // 2) Zapneme prepaint (stránka je vizuálně skrytá, ale layout běží)
+  document.documentElement.classList.add('prepaint');
+
+  // 3) Načteme tvoje CSS a použijeme ho
+  fetch('https://raw.githubusercontent.com/IrbisCZ/HTML/refs/heads/main/Zahlavi.txt')
+    .then(r => r.text())
+    .then(css => {
+      const style = document.createElement('style');
+      style.textContent = css;
+      document.head.appendChild(style);
     })
-    .catch(error => {
-      console.error('Chyba při načítání souboru:', error);
-      document.documentElement.style.display = 'block';
+    .catch(console.error)
+    .finally(() => {
+      // 4) Odmalujeme stránku
+      document.documentElement.classList.remove('prepaint');
+
+      // 5) Jistota pro filtr – zruší případný inline max-height/overflow
+      const boxBody = document.querySelector('.box-filters .box-body');
+      if (boxBody) {
+        boxBody.style.maxHeight = 'none';
+        boxBody.style.overflow = 'visible';
+      }
     });
+})();
  // Načte CSS soubor
   fetch('https://raw.githubusercontent.com/IrbisCZ/HTML/refs/heads/main/Zahlavi.txt')
     .then(response => response.text())
